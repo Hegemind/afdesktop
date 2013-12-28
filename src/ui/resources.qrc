@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file alias="location">img/1388110778_location-24.png</file>
+        <file alias="cmd">img/1388110825_cmd-24.png</file>
+        <file alias="man">img/1388110826_man-24.png</file>
+        <file alias="eye">img/1388110876_eye-24.png</file>
+        <file alias="calendar">img/1388110887_calendar-24.png</file>
+        <file alias="new">img/1388110889_new-24.png</file>
+        <file alias="settings">img/1388110934_Black_Settings.png</file>
+        <file alias="pnjs">img/1388110826_man2-24.png</file>
+        <file alias="hegemon-logo">img/logo.png</file>
+        <file alias="hegemon-logo-dark">img/logo-dark.jpg</file>
+        <file alias="explorer">img/1387082376_folders_explorer.png</file>
+        <file alias="tag">img/1387082444_tag_gray.png</file>
+        <file>img/folder-black.png</file>
+        <file>img/folder-blue.png</file>
+        <file>img/folder-brown.png</file>
+        <file>img/folder-gray.png</file>
+        <file>img/folder-green.png</file>
+        <file>img/folder-orange.png</file>
+        <file>img/folder-purple.png</file>
+        <file>img/folder-red.png</file>
+        <file>img/folder-white.png</file>
+        <file>img/folder-yellow.png</file>
+        <file>img/folders.png</file>
+        <file>img/folders-add.png</file>
+        <file>img/folder-add.png</file>
+    </qresource>
+</RCC>

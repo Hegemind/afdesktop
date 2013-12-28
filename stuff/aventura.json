@@ -1,0 +1,67 @@
+{
+	"titulo" : "La aventura inadvertida",
+	"resumen" : "Este es el resumen resumido de la aventura en cuestión",
+	"pnjs" : [ "1", "2", "3"],
+	"anotaciones" : [ "Anotacion 1", "Anotacion 2", "Anotacion 3", "Anotacion 4"],
+	"planteamiento" : {
+		"introduccion" : "Lorem ipsum dolor...",
+		"posibilidades" : "Puede ser que... o que..."
+	},
+	"nudos" : [
+		{
+			"titulo" : "nudo 1",
+			"descripcion" : "Descripcion nudo 1",
+			"escenas" : [
+				{
+					"titulo" : "Escena 1",
+					"descripcion" : "Descripcion escena 1"
+				},
+				{
+					"titulo" : "Escena 2",
+					"descripcion" : "Descripcion escena 1"
+				},
+				{
+					"titulo" : "Escena 3",
+					"descripcion" : "Descripcion escena 1"
+				}
+			]
+		},
+		{
+			"titulo" : "nudo 2",
+			"descripcion" : "Descripcion nudo 2",
+			"escenas" : [
+				{
+					"titulo" : "Escena 1",
+					"descripcion" : "Descripcion escena 1"
+				},
+				{
+					"titulo" : "Escena 2",
+					"descripcion" : "Descripcion escena 1"
+				},
+				{
+					"titulo" : "Escena 3",
+					"descripcion" : "Descripcion escena 1"
+				}
+			]
+		}
+	],
+	"desenlace" : {
+		"escenas" : [
+			{
+				"titulo" : "Escena 1",
+				"descripcion" : "Descripcion escena 1"
+			},
+			{
+				"titulo" : "Escena 2",
+				"descripcion" : "Descripcion escena 1"
+			},
+			{
+				"titulo" : "Escena 3",
+				"descripcion" : "Descripcion escena 1"
+			}
+		],
+		"desenlace" : "Señores, esto acaba asin"
+	},
+	"extras" : "extra! extra!",
+	"localizacion" : "localizacion 1"
+}
