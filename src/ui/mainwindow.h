@@ -32,6 +32,7 @@ private slots:
     void addNewFolder();
     void addNewDocument();
     void contextMenu(QPoint point);
+    void editBloc(QModelIndex index);
 
 };
 

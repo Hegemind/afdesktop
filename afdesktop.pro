@@ -18,13 +18,11 @@ SOURCES +=\
     src/main.cpp \
 	src/ui/tabs/tabpjs.cpp \
     src/ui/tabs/tabpnjs.cpp \
-    src/ui/dialogs/dialogcharacter.cpp \
     src/ui/views/characteritemview.cpp \
     src/ui/models/characterlistmodel.cpp \
-    src/business/adventure.cpp \
-    src/controller/adventurecontroller.cpp \
     src/ui/dialogs/dialogabout.cpp \
-    src/ui/dialogs/dialognewadventure.cpp
+    src/ui/dialogs/dialognewadventure.cpp \
+    src/ui/widgets/characterwidget.cpp
 
 HEADERS += src/ui/mainwindow.h \
     src/controller/server.h \
@@ -32,21 +30,19 @@ HEADERS += src/ui/mainwindow.h \
     src/business/character.h \
 	src/ui/tabs/tabpjs.h \
     src/ui/tabs/tabpnjs.h \
-    src/ui/dialogs/dialogcharacter.h \
     src/ui/views/characteritemview.h \
     src/ui/models/characterlistmodel.h \
-    src/business/adventure.h \
-    src/controller/adventurecontroller.h \
     src/ui/dialogs/dialogabout.h \
-    src/ui/dialogs/dialognewadventure.h
+    src/ui/dialogs/dialognewadventure.h \
+    src/ui/widgets/characterwidget.h
 
 FORMS += src/ui/mainwindow.ui \
     src/ui/tabs/tabpjs.ui \
     src/ui/tabs/tabpnjs.ui \
-    src/ui/dialogs/dialogcharacter.ui \
     src/ui/views/characteritemview.ui \
     src/ui/dialogs/dialogabout.ui \
-    src/ui/dialogs/dialognewadventure.ui
+    src/ui/dialogs/dialognewadventure.ui \
+    src/ui/widgets/characterwidget.ui
 
 CONFIG += c++11
 

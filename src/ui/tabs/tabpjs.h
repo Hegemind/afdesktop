@@ -5,6 +5,7 @@
 #include <QListWidgetItem>
 
 #include "src/controller/charactercontroller.h"
+#include "src/ui/widgets/characterwidget.h"
 
 namespace Ui {
 class TabPjs;
@@ -23,12 +24,12 @@ public:
 private slots:
     void poblarListaPersonajes();
     void mostrarPersonajeEnCaja(QByteArray data);
-    void onListMailItemClicked(QModelIndex i);
+    void personajeSeleccionado(QModelIndex i);
 
 private:
     Ui::TabPjs *ui;
     CharacterController* charController;
-
+    CharacterWidget* charWidget;
 };
 
 #endif // TABPJS_H

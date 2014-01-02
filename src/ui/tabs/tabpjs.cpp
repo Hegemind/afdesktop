@@ -4,39 +4,37 @@
 #include <QStandardItemModel>
 #include <QMessageBox>
 
-#include "src/ui/dialogs/dialogcharacter.h"
 #include "src/ui/views/characteritemview.h"
 
 TabPjs::TabPjs(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TabPjs)
 {
+    // Preparar UI
     ui->setupUi(this);
+
+    charWidget = new CharacterWidget();
+    ui->frameDerecha->layout()->addWidget(charWidget);
 
     charController = CharacterController::get();
 
     // Eventos de pulsar botones
     connect(ui->botonObtener, SIGNAL(clicked()), charController, SLOT(requestRefresh()));
-    //QObject::connect(ui->botonObtenerSeleccionado, SIGNAL(clicked()), server, SLOT(obtenerPersonajeSeleccionado()));
+    connect(ui->listaPersonajes, SIGNAL(clicked(QModelIndex)), this, SLOT(personajeSeleccionado(QModelIndex)));
+
 
     // Eventos de datos recibidos
     connect(charController, SIGNAL(refreshCompleted()), this, SLOT(poblarListaPersonajes()));
-    //QObject::connect(server, SIGNAL(obtenerPersonajeSeleccionadoTerminado(QByteArray)), this, SLOT(mostrarPersonajeEnCaja(QByteArray)));
-
-    connect(ui->listaPersonajes, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(onListMailItemClicked(QModelIndex)));
 }
 
 TabPjs::~TabPjs()
 {
     delete ui;
+    delete charWidget;
 }
 
-void TabPjs::onListMailItemClicked(QModelIndex i)
+void personajeSeleccionado(QModelIndex i)
 {
-    //QMessageBox::information(0, "Try Again", "Please try to activate your Bluetooth again.");
-    DialogCharacter* dc = new DialogCharacter();
-    dc->setModal(true);
-    dc->exec();
 
 }
 
@@ -62,5 +60,5 @@ void TabPjs::poblarListaPersonajes()
 
 void TabPjs::mostrarPersonajeEnCaja(QByteArray data)
 {
-    ui->cajaRespuestas->append(data);
+//    ui->cajaRespuestas->append(data);
 }

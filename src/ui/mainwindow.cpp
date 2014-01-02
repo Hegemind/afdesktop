@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // Preparar GUI
     ui->setupUi(this);
     about = new DialogAbout();
-    connect(ui->actionNueva_aventura, SIGNAL(triggered()), this, SLOT(addNewAdventure()));
+    connect(ui->actionNuevoBloc, SIGNAL(triggered()), this, SLOT(addNewAdventure()));
 
     // Arbol izquierdo
     model = new QStandardItemModel();
@@ -24,11 +24,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->treeView->setContextMenuPolicy(Qt::CustomContextMenu);
     // Menu contextual del arbol de la izquierda
     treeContextMenu = new QMenu(ui->treeView);
+    treeContextMenu->addAction(ui->actionNuevoBloc);
+    treeContextMenu->addSeparator();
     treeContextMenu->addAction(ui->actionNuevaCarpeta);
     treeContextMenu->addAction(ui->actionNuevoDocumento);
-    connect(ui->treeView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
     connect(ui->actionNuevaCarpeta, SIGNAL(triggered()), this, SLOT(addNewFolder()));
     connect(ui->actionNuevoDocumento, SIGNAL(triggered()), this, SLOT(addNewDocument()));
+    connect(ui->treeView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextMenu(QPoint)));
+    connect(ui->treeView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(editBloc(QModelIndex)));
 
     // Configurar Acerca de...
     connect(ui->actionAcerca_de, SIGNAL(triggered()), about, SLOT(open()));
@@ -105,7 +108,7 @@ MainWindow::~MainWindow()
 void MainWindow::addNewAdventure()
 {
     bool ok;
-    QString text = QInputDialog::getText(this, tr("Nueva aventura"), tr("Título:"), QLineEdit::Normal, QString(), &ok);
+    QString text = QInputDialog::getText(this, tr("Nueva aventura"), tr("Nombre de la aventura:"), QLineEdit::Normal, QString(), &ok);
 
     if(ok && !text.isEmpty())
     {
@@ -129,4 +132,11 @@ void MainWindow::addNewDocument()
 void MainWindow::contextMenu(QPoint point)
 {
     treeContextMenu->popup(point);
+}
+
+void MainWindow::editBloc(QModelIndex index)
+{
+    bool ok;
+    QString nombre = model->itemFromIndex(index)->text();
+    QString text = QInputDialog::getText(this, tr("Editar aventura"), tr("Nombre de la aventura:"), QLineEdit::Normal, nombre, &ok);
 }
