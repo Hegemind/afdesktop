@@ -33,7 +33,7 @@ TabPjs::~TabPjs()
     delete charWidget;
 }
 
-void personajeSeleccionado(QModelIndex i)
+void TabPjs::personajeSeleccionado(QModelIndex i)
 {
 
 }
