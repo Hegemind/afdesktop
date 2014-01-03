@@ -11,7 +11,7 @@ class CharacterController : public QObject
 {
     Q_OBJECT
 
-    CharacterController();
+    CharacterController(Server *server);
     ~CharacterController();
     static CharacterController* instancia;
 
