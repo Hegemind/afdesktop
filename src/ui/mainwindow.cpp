@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <QInputDialog>
+#include <QMessageBox>
 
 #include "src/ui/tabs/tabpjs.h"
 #include "src/ui/tabs/tabpnjs.h"
@@ -11,12 +12,14 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
+    server(Server::get()),
     ui(new Ui::MainWindow)
-{
+{    
     // Preparar GUI
     ui->setupUi(this);
     about = new DialogAbout();
     connect(ui->actionNuevoBloc, SIGNAL(triggered()), this, SLOT(addNewAdventure()));
+    connect(ui->actionSetServer, SIGNAL(triggered()), this, SLOT(changeServer()));
 
     // Arbol izquierdo
     model = new QStandardItemModel();
@@ -141,4 +144,22 @@ void MainWindow::editBloc(QModelIndex index)
     bool ok;
     QString nombre = model->itemFromIndex(index)->text();
     QString text = QInputDialog::getText(this, tr("Editar aventura"), tr("Nombre de la aventura:"), QLineEdit::Normal, nombre, &ok);
+}
+
+void MainWindow::changeServer()
+{
+    QString titulo = tr("Cambiar ubicación del servidor");
+    bool ok;
+
+    QString text = QInputDialog::getText(this, titulo, tr("Servidor:"), QLineEdit::Normal, QString(), &ok);
+
+    if(ok)
+    {
+        if(text.isEmpty())
+            QMessageBox::warning(this, titulo, "El nombre del servidor no puede estar vacío", QMessageBox::Ok);
+        else if(server->setAddress(text))
+            QMessageBox::information(this, titulo, "El servidor se ha cambiado correctamente", QMessageBox::Ok);
+        else
+            QMessageBox::critical(this, titulo, "Ha ocurrido un error al cambiar la ubicación del servidor", QMessageBox::Ok);
+    }
 }
