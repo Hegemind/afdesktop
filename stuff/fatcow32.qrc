@@ -16,5 +16,6 @@
         <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/add.png</file>
         <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/delete.png</file>
         <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/arrow_refresh.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/database_server.png</file>
     </qresource>
 </RCC>
