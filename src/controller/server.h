@@ -9,13 +9,17 @@ class Server : public QObject
 
     QNetworkAccessManager* qnam;
     QNetworkReply *reply;
-
-public:
+    QString address;
+    static Server* instancia;
     Server();
+public:
+    static Server* get();
+
 
 public slots:
     void obtenerPersonajes();
     void obtenerPersonajeSeleccionado();
+    bool setAddress(const QString& addr){ address = addr; return true; }
 
 private slots:
     void networkDone();

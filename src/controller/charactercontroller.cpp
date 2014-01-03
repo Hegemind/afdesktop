@@ -2,10 +2,10 @@
 
 CharacterController* CharacterController::instancia = 0;
 
-CharacterController::CharacterController()
+CharacterController::CharacterController(Server* server) :
+    server(server)
 {
     cache = new CharacterCache();
-    server = new Server();
 
     // Eventos de pulsar botones
     QObject::connect(this, SIGNAL(refresh()), server, SLOT(obtenerPersonajes()));
@@ -17,13 +17,12 @@ CharacterController::CharacterController()
 CharacterController::~CharacterController()
 {
     delete cache;
-    delete server;
 }
 
 CharacterController* CharacterController::get()
 {
     if(instancia == 0){
-        instancia = new CharacterController();
+        instancia = new CharacterController(Server::get());
     }
 
     return instancia;
