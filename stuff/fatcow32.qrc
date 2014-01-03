@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/fat32">
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/document_notes.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/door_in.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/boxtrapper.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_gear.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_go.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_key.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_link.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_add.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_delete.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_edit.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_error.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/account_functions.png</file>
+    </qresource>
+</RCC>

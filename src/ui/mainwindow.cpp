@@ -45,19 +45,21 @@ MainWindow::MainWindow(QWidget *parent) :
     QIcon i1(QString(":/icon/cmd"));
     QIcon i2(QString(":/icon/calendar"));
     QIcon i3(QString(":/icon/eye"));
-    QIcon i4(QString(":/icon/man"));
-    QIcon i5(QString(":/icon/pnjs"));
+    QIcon i4(QString(":/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/account_functions.png"));
+    QIcon i5(QString(":/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/group.png"));
     QIcon i6(QString(":/icon/settings"));
     // Añadir mis propios tabs
-    tabs->addTab(new QTabWidget(), i0, "Localización");
-    tabs->addTab(new QTabWidget(), i1, "Combate");
-    tabs->addTab(new QTabWidget(), i2, "Encuentros");
-    tabs->addTab(new QTabWidget(), i3, "Pantalla");
+    //tabs->addTab(new QTabWidget(), i0, "Localización");
+    //tabs->addTab(new QTabWidget(), i1, "Combate");
+    //tabs->addTab(new QTabWidget(), i2, "Encuentros");
+    //tabs->addTab(new QTabWidget(), i3, "Pantalla");
     tabs->addTab(new TabPjs(),     i4, "PJs");
     tabs->addTab(new TabPnjs(),    i5, "PNJs");
-    tabs->addTab(new QTabWidget(), i6, "Reglas");
+    //tabs->addTab(new QTabWidget(), i6, "Reglas");
+
     // Estilo para los tabs
     tabs->setStyleSheet("QTabBar::tab { height: 50px; width: 120px; }");
+    tabs->setIconSize(QSize(32, 32));
 
 
     // Cargar datos inicialmente

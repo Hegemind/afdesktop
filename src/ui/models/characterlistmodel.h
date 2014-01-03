@@ -23,16 +23,16 @@ public:
         return lista.size();
     }
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-    {
-        if (!index.isValid() || index.row() >= lista.size())
-            return QVariant();
+//    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
+//    {
+//        if (!index.isValid() || index.row() >= lista.size())
+//            return QVariant();
 
-        if (role == Qt::DisplayRole)
-            return lista.at(index.row());
-        else
-            return QVariant();
-    }
+//        if (role == Qt::DisplayRole)
+//            return lista.at(index.row());
+//        else
+//            return QVariant();
+//    }
 
     QVariant headerData(int section, Qt::Orientation orientation, int role) const
     {
@@ -45,7 +45,7 @@ public:
             return QString("Row %1").arg(section);
     }
 
-    Qt::ItemFlags flags(const QModelIndex &index) const { return QAbstractListModel::flags() | Qt::ItemIsEditable; }
+    //Qt::ItemFlags flags(const QModelIndex &index) const { return QAbstractListModel::flags() | Qt::ItemIsEditable; }
 
 //    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
 //    {

@@ -49,4 +49,5 @@ CONFIG += c++11
 OTHER_FILES +=
 
 RESOURCES += \
-    src/ui/resources.qrc
+    src/ui/resources.qrc \
+    stuff/fatcow32.qrc
