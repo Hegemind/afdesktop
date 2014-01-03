@@ -37,6 +37,48 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>Nuevo</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../../stuff/fatcow32.qrc">
+             <normaloff>:/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/add.png</normaloff>:/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/add.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Eliminar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../../stuff/fatcow32.qrc">
+             <normaloff>:/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/delete.png</normaloff>:/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/delete.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="botonObtener">
+           <property name="text">
+            <string>Actualizar lista</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../../stuff/fatcow32.qrc">
+             <normaloff>:/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/arrow_refresh.png</normaloff>:/fat32/fatcow-hosting-icons-3800/FatCow_Icons32x32/arrow_refresh.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -59,13 +101,6 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QPushButton" name="botonObtener">
-           <property name="text">
-            <string>Actualizar lista</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -77,6 +112,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../../stuff/fatcow32.qrc"/>
+ </resources>
  <connections/>
 </ui>

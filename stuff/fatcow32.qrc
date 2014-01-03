@@ -13,5 +13,8 @@
         <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_edit.png</file>
         <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/group_error.png</file>
         <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/account_functions.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/add.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/delete.png</file>
+        <file>fatcow-hosting-icons-3800/FatCow_Icons32x32/arrow_refresh.png</file>
     </qresource>
 </RCC>
